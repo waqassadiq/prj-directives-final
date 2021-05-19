@@ -13,15 +13,15 @@ export class RecipeService {
   recipeSelected = new EventEmitter<Recipe>();
   
   private recipes: Recipe[] = [
-    new Recipe('Shawarma', 'This is simply a test', 'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg',
+    new Recipe('Shawarma', 'This is simply a test', 'https://image.freepik.com/free-photo/side-view-shawarma-with-fried-potatoes-board-cookware_176474-3215.jpg',
     [
-      new Ingredient('Doe', 3),
-      new Ingredient('Meat', 1),
+      new Ingredient('Bread', 2),
+      new Ingredient('Meat', 4),
     ]),
-    new Recipe('Burger', 'This is simply a test', 'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg',
+    new Recipe('Burger', 'This is simply a test', 'https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_1280.jpg',
     [
-      new Ingredient('Buns', 2),
-      new Ingredient('Potato', 3),
+      new Ingredient('Buns', 1),
+      new Ingredient('Tomatoes', 1),
     ])
     
   ];
