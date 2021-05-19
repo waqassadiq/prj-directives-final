@@ -23,4 +23,11 @@ private   ingredients: Ingredient[] = [
     this.ingredients.push(ingredient);
     this.ingredientsChanged.emit(this.ingredients.slice());
   }
+
+  addToShoppingList(ingredients: Ingredient[]){
+    console.log("ingredients;;;; " + ingredients);
+    this.ingredients.push(ingredients[0]);
+    this.ingredients.push(ingredients[1]);
+    this.ingredientsChanged.emit(this.ingredients.slice());
+  }
 }
