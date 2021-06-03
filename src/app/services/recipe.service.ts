@@ -4,6 +4,7 @@ import {
 
 import { Recipe } from '../recipes/recipe.model';
 import { Ingredient } from '../shared/ingredient.model';
+import { ShoppingService } from './shopping.service';
 
 @Injectable({
   providedIn: 'root'
@@ -23,12 +24,17 @@ export class RecipeService {
       new Ingredient('Buns', 1),
       new Ingredient('Tomatoes', 1),
     ])
-    
   ];
+
+  constructor(private shoppingService: ShoppingService){
+  }
 
   getRecipies(){
     return this.recipes.slice();
   }
 
-  constructor() { }
+  addIngredientsToShoppingList(ingredients: Ingredient[]){
+    this.shoppingService.addToShoppingList(ingredients);
+  }
+
 }

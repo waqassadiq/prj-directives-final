@@ -25,9 +25,15 @@ private   ingredients: Ingredient[] = [
   }
 
   addToShoppingList(ingredients: Ingredient[]){
-    console.log("ingredients;;;; " + ingredients);
-    this.ingredients.push(ingredients[0]);
-    this.ingredients.push(ingredients[1]);
+   // console.log("ingredients;;;; " + ingredients);
+    
+   //this.ingredients.push(ingredients[0]);
+   // this.ingredients.push(ingredients[1]);
+   // Or it would emit many events
+   // for(let ingredient of ingredients){
+   //   this.ingredients.push(ingredient);
+   // }
+    this.ingredients.push(...ingredients);
     this.ingredientsChanged.emit(this.ingredients.slice());
   }
 }
